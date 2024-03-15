@@ -379,8 +379,8 @@ GameObject:
   - component: {fileID: 552946237}
   - component: {fileID: 552946240}
   m_Layer: 5
-  m_Name: Paddle
-  m_TagString: Goal
+  m_Name: Player One
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
