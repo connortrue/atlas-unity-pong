@@ -8,18 +8,18 @@ public class Paddle : MonoBehaviour
 
     void Start()
     {
-        paddleSize = GetComponent<SpriteRenderer>().bounds.size;
+        paddleSize = GetComponent<BoxCollider2D>().bounds.size;
         screenHeight = Camera.main.orthographicSize;
     }
 
     void Update()
     {
         float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        Vector2 paddlePos = transform.position;
+        Vector2 paddlePos = transform.localPosition;
         paddlePos.y += move;
 
-        paddlePos.y = Mathf.Clamp(paddlePos.y, -screenHeight + paddleSize.y / 2, screenHeight - paddleSize.y / 2);
-        transform.position = paddlePos;
+        //paddlePos.y = Mathf.Clamp(paddlePos.y, -screenHeight + paddleSize.y / 2, screenHeight - paddleSize.y / 2);
+        transform.localPosition = paddlePos;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
