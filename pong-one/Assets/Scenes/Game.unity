@@ -929,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 660876282472113968, guid: 8d36b208f73969cffbee80f403fba622, type: 3}
+      propertyPath: m_TagString
+      value: Ball
+      objectReference: {fileID: 0}
     - target: {fileID: 8822629679025975078, guid: 8d36b208f73969cffbee80f403fba622, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
