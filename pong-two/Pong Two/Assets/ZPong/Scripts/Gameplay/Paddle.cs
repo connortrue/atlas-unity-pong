@@ -27,6 +27,10 @@ namespace ZPong
                 rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, PlayerPrefs.GetFloat("PaddleSize"));
                 this.GetComponent<BoxCollider2D>().size = rectTransform.sizeDelta;
             }
+            else
+            {
+                //Debug.Log("Why did you mess with the PlayerPrefs?")
+            }
 
             halfPlayerHeight = rectTransform.sizeDelta.y / 2f;
 
