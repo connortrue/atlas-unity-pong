@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7fc85727a7acd59b68ce001a989ba24f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -916,14 +916,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25364897, g: 0.3548253, b: 0.9433962, a: 1}
+  m_Color: {r: 0.76862746, g: 0.76862746, b: 0.76862746, a: 0.5372549}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a05b4c50b52af8ec9eb8081d56c1e03, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1089,6 +1089,7 @@ GameObject:
   - component: {fileID: 899253994}
   - component: {fileID: 899253993}
   - component: {fileID: 899253992}
+  - component: {fileID: 899253997}
   m_Layer: 5
   m_Name: Player Two
   m_TagString: Paddle
@@ -1209,7 +1210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a05b4c50b52af8ec9eb8081d56c1e03, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1227,6 +1228,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899253990}
   m_CullTransparentMesh: 1
+--- !u!114 &899253997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899253990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af409d0f3cce3a1f698c50df45b966c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 1
 --- !u!1 &1207279360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1387,7 @@ GameObject:
   - component: {fileID: 1208166302}
   - component: {fileID: 1208166301}
   - component: {fileID: 1208166300}
+  - component: {fileID: 1208166304}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1472,6 +1487,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1208166304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208166299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24a4dd929ff828eda500e1db758254b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1276546974}
+  leftPaddle: {fileID: 561484957}
+  rightPaddle: {fileID: 899253990}
+  middleBar: {fileID: 0}
+  background: {fileID: 293929700}
+  walls: {fileID: 0}
 --- !u!1 &1257459830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1626,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257459830}
   m_CullTransparentMesh: 1
+--- !u!1 &1276546974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944913817348981301, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
+  m_PrefabInstance: {fileID: 3944913816877611363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1302148168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,6 +1719,7 @@ GameObject:
   - component: {fileID: 1342398633}
   - component: {fileID: 1342398632}
   - component: {fileID: 1342398635}
+  - component: {fileID: 1342398636}
   m_Layer: 5
   m_Name: Right Goal
   m_TagString: Goal
@@ -1802,6 +1841,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00984e94003096c4cb879adf64ee9122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1342398636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342398630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af409d0f3cce3a1f698c50df45b966c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 1
 --- !u!224 &1449522727 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6459443173240739764, guid: 7a37fcaf6b261a2458e8d057088c27ef, type: 3}
@@ -1818,6 +1870,7 @@ GameObject:
   - component: {fileID: 1521815778}
   - component: {fileID: 1521815780}
   - component: {fileID: 1521815779}
+  - component: {fileID: 1521815781}
   m_Layer: 5
   m_Name: Left Score
   m_TagString: Untagged
@@ -1941,6 +1994,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521815777}
   m_CullTransparentMesh: 1
+--- !u!114 &1521815781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521815777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af409d0f3cce3a1f698c50df45b966c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 1
 --- !u!1 &1602497548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,6 +2441,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3944913817348981301, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944913817348981305, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ce68e1cac25e43059bf78a47ccce2d5, type: 3}
+    - target: {fileID: 3944913817348981305, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944913817348981305, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944913817348981305, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
+      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3944913817348981311, guid: 72ee9d7406810c14386966108a14c6bd, type: 3}
